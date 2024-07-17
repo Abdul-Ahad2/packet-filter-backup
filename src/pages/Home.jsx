@@ -33,7 +33,7 @@ function Home() {
 
       try {
         const response = await axios.post(
-          "http://localhost:3001/upload",
+          "https://substantial-cloud-animal.glitch.me/upload",
           formData,
           {
             headers: {
@@ -73,21 +73,15 @@ function Home() {
               backseat.
             </p>
             <div className="flex flex-col sm:flex-row mt-6 sm:mt-10">
-              <label className="bg-white m-2 sm:m-3 relative w-40 text-center py-3 sm:py-5 cursor-pointer">
+              <label className="bg-white m-2 sm:m-3 relative w-80 text-center py-3 sm:py-5 cursor-pointer">
                 <input
                   type="file"
                   className="absolute inset-0 opacity-0"
                   accept=".pcap"
                   onChange={handleFileChange}
                 />
-                PCAP file
+                Upload PCAP file
               </label>
-              <button
-                onClick={handleCaptureClick}
-                className="bg-white m-2 sm:m-3 w-40 py-3 sm:py-5"
-              >
-                Live Capture
-              </button>
             </div>
           </div>
         </div>

@@ -15,7 +15,9 @@ function History() {
     // Fetch new data and update history
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/results");
+        const response = await axios.get(
+          "https://substantial-cloud-animal.glitch.me/results"
+        );
         const newData = response.data.parsedData;
 
         setPacketData((prevData) => {
